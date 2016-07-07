@@ -1,0 +1,30 @@
+INCLUDE(FindPkgConfig)
+PKG_CHECK_MODULES(PC_TESTBLOCKS testblocks)
+
+FIND_PATH(
+    TESTBLOCKS_INCLUDE_DIRS
+    NAMES testblocks/api.h
+    HINTS $ENV{TESTBLOCKS_DIR}/include
+        ${PC_TESTBLOCKS_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    TESTBLOCKS_LIBRARIES
+    NAMES gnuradio-testblocks
+    HINTS $ENV{TESTBLOCKS_DIR}/lib
+        ${PC_TESTBLOCKS_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+)
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(TESTBLOCKS DEFAULT_MSG TESTBLOCKS_LIBRARIES TESTBLOCKS_INCLUDE_DIRS)
+MARK_AS_ADVANCED(TESTBLOCKS_LIBRARIES TESTBLOCKS_INCLUDE_DIRS)
+
