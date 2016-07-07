@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<block>
+  <name>vec_shift</name>
+  <key>testblocks_vec_shift</key>
+  <category>testblocks</category>
+  <import>import testblocks</import>
+  <make>testblocks.vec_shift()</make>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <vlen>3</vlen>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <vlen>3</vlen>
+  </source>
+</block>

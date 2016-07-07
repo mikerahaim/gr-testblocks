@@ -22,5 +22,5 @@
 ########################################################################
 install(FILES
     api.h
-    DESTINATION include/testblocks
+    vec_shift.h DESTINATION include/testblocks
 )
