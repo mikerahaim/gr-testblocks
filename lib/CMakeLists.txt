@@ -27,6 +27,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 list(APPEND testblocks_sources
     vec_shift_impl.cc
+    vec_shift_var_impl.cc
 )
 
 set(testblocks_sources "${testblocks_sources}" PARENT_SCOPE)

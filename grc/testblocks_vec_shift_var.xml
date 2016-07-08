@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<block>
+  <name>vec_shift_var</name>
+  <key>testblocks_vec_shift_var</key>
+  <category>testblocks</category>
+  <import>import testblocks</import>
+  <make>testblocks.vec_shift_var($vec_len, $shift)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Vector Length</name>
+    <key>vec_len</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Shift Amount</name>
+    <key>shift</key>
+    <type>int</type>
+  </param>
+
+  <check>$vec_len &gt; 0</check>
+  <check>$shift &gt;= 0</check>
+  <check>$shift &lt; $vec_len</check>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <vlen>$vec_len</vlen>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <vlen>$vec_len</vlen>
+  </source>
+</block>

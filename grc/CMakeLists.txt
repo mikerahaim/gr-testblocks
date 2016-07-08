@@ -18,5 +18,6 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    testblocks_vec_shift.xml DESTINATION share/gnuradio/grc/blocks
+    testblocks_vec_shift.xml
+    testblocks_vec_shift_var.xml DESTINATION share/gnuradio/grc/blocks
 )
