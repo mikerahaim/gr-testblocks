@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<block>
+  <name>vec_resize</name>
+  <key>testblocks_vec_resize</key>
+  <category>testblocks</category>
+  <import>import testblocks</import>
+  <make>testblocks.vec_resize($in_len, $out_len)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Input Length</name>
+    <key>in_len</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Output Length</name>
+    <key>out_len</key>
+    <type>int</type>
+  </param>
+  
+  <check>$in_len &gt; 0</check>
+  <check>$out_len &gt; 0</check>
+  
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <vlen>$in_len</vlen>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <vlen>$out_len</vlen>
+  </source>
+</block>

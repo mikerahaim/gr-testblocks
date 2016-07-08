@@ -23,5 +23,6 @@
 install(FILES
     api.h
     vec_shift.h
-    vec_shift_var.h DESTINATION include/testblocks
+    vec_shift_var.h
+    vec_resize.h DESTINATION include/testblocks
 )
