@@ -20,5 +20,6 @@
 install(FILES
     testblocks_vec_shift.xml
     testblocks_vec_shift_var.xml
-    testblocks_vec_resize.xml DESTINATION share/gnuradio/grc/blocks
+    testblocks_vec_resize.xml
+    testblocks_mult_var.xml DESTINATION share/gnuradio/grc/blocks
 )
