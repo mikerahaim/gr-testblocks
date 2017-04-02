@@ -32,7 +32,7 @@ namespace gr {
       // Nothing to declare in this block.
 
      public:
-      streams_to_streams_ff_impl();
+      streams_to_streams_ff_impl(int num_streams);
       ~streams_to_streams_ff_impl();
 
       // Where all the action really happens

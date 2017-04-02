@@ -46,7 +46,7 @@ namespace gr {
        * class. testblocks::streams_to_streams_ff::make is the public interface for
        * creating new instances.
        */
-      static sptr make();
+      static sptr make(int num_streams);
     };
 
   } // namespace testblocks

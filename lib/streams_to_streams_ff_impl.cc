@@ -29,16 +29,16 @@ namespace gr {
   namespace testblocks {
 
     streams_to_streams_ff::sptr
-    streams_to_streams_ff::make()
+    streams_to_streams_ff::make(int num_streams)
     {
       return gnuradio::get_initial_sptr
-        (new streams_to_streams_ff_impl());
+        (new streams_to_streams_ff_impl(num_streams));
     }
 
     /*
      * The private constructor
      */
-    streams_to_streams_ff_impl::streams_to_streams_ff_impl()
+    streams_to_streams_ff_impl::streams_to_streams_ff_impl(int num_streams)
       : gr::sync_block("streams_to_streams_ff",
               gr::io_signature::make(1, -1, sizeof(float)),
               gr::io_signature::make(1, -1, sizeof(float)))

@@ -33,10 +33,11 @@ class qa_streams_to_streams_ff (gr_unittest.TestCase):
 
     def test_001_t (self):
         #This tests 1 stream, to make sure it outputs the same input from before
+        numstreams=1
         src_data=(1.0,2.0,3.0,4.0,5.0)
         expected_results=(1.0,2.0,3.0,4.0,5.0)
         src = blocks.vector_source_f(src_data)
-        blk = testblocks.streams_to_streams_ff()
+        blk = testblocks.streams_to_streams_ff(numstreams)
         dst = blocks.vector_sink_f()
         
         self.tb.connect(src, blk)
@@ -49,6 +50,7 @@ class qa_streams_to_streams_ff (gr_unittest.TestCase):
         
     def test_002_t (self):
         #This tests multiple streams, to make sure it outputs the same input from before
+        numstreams=3
         src_data0=(1.0,2.0,3.0)
         src_data1=(4.0,5.0,6.0)
         src_data2=(7.0,8.0,9.0)
@@ -56,7 +58,7 @@ class qa_streams_to_streams_ff (gr_unittest.TestCase):
         src0 = blocks.vector_source_f(src_data0)
         src1 = blocks.vector_source_f(src_data1)
         src2 = blocks.vector_source_f(src_data2)
-        blk = testblocks.streams_to_streams_ff()
+        blk = testblocks.streams_to_streams_ff(numstreams)
         dst0 = blocks.vector_sink_f()
         dst1 = blocks.vector_sink_f()
         dst2 = blocks.vector_sink_f()
