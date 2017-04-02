@@ -45,3 +45,4 @@ GR_ADD_TEST(qa_vec_shift ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_vec
 GR_ADD_TEST(qa_vec_shift_var ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_vec_shift_var.py)
 GR_ADD_TEST(qa_vec_resize ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_vec_resize.py)
 GR_ADD_TEST(qa_mult_var ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_mult_var.py)
+GR_ADD_TEST(qa_streams_to_streams_ff ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_streams_to_streams_ff.py)

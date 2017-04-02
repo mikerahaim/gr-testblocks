@@ -12,6 +12,7 @@
 #include "testblocks/vec_shift_var.h"
 #include "testblocks/vec_resize.h"
 #include "testblocks/mult_var.h"
+#include "testblocks/streams_to_streams_ff.h"
 %}
 
 
@@ -23,3 +24,6 @@ GR_SWIG_BLOCK_MAGIC2(testblocks, vec_shift_var);
 GR_SWIG_BLOCK_MAGIC2(testblocks, vec_resize);
 %include "testblocks/mult_var.h"
 GR_SWIG_BLOCK_MAGIC2(testblocks, mult_var);
+
+%include "testblocks/streams_to_streams_ff.h"
+GR_SWIG_BLOCK_MAGIC2(testblocks, streams_to_streams_ff);

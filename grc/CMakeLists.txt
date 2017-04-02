@@ -16,10 +16,10 @@
 # along with GNU Radio; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
-
 install(FILES
     testblocks_vec_shift.xml
     testblocks_vec_shift_var.xml
     testblocks_vec_resize.xml
-    testblocks_mult_var.xml DESTINATION share/gnuradio/grc/blocks
+    testblocks_mult_var.xml
+    testblocks_streams_to_streams_ff.xml DESTINATION share/gnuradio/grc/blocks
 )
