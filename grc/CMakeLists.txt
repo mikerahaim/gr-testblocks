@@ -23,5 +23,7 @@ install(FILES
     testblocks_mult_var.xml
     testblocks_streams_to_streams_ff.xml
     testblocks_interp2.xml
-    testblocks_decim2.xml DESTINATION share/gnuradio/grc/blocks
+    testblocks_decim2.xml
+    testblocks_interp_var.xml
+    testblocks_decim_var.xml DESTINATION share/gnuradio/grc/blocks
 )

@@ -48,3 +48,5 @@ GR_ADD_TEST(qa_mult_var ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_mult
 GR_ADD_TEST(qa_streams_to_streams_ff ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_streams_to_streams_ff.py)
 GR_ADD_TEST(qa_interp2 ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_interp2.py)
 GR_ADD_TEST(qa_decim2 ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_decim2.py)
+GR_ADD_TEST(qa_interp_var ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_interp_var.py)
+GR_ADD_TEST(qa_decim_var ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_decim_var.py)

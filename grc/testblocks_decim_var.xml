@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<block>
+  <name>decim_var</name>
+  <key>testblocks_decim_var</key>
+  <category>[testblocks]</category>
+  <import>import testblocks</import>
+  <make>testblocks.decim_var($decimation)</make>
+
+  <param>
+    <name>Decimation</name>
+    <key>decimation</key>
+    <type>float</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

@@ -28,5 +28,7 @@ install(FILES
     mult_var.h
     streams_to_streams_ff.h
     interp2.h
-    decim2.h DESTINATION include/testblocks
+    decim2.h
+    interp_var.h
+    decim_var.h DESTINATION include/testblocks
 )
