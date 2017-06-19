@@ -31,6 +31,7 @@ list(APPEND testblocks_sources
     mult_var_impl.cc
     streams_to_streams_ff_impl.cc
     interp2_impl.cc
+    decim2_impl.cc
 )
 
 set(testblocks_sources "${testblocks_sources}" PARENT_SCOPE)

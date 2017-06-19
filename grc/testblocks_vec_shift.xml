@@ -2,7 +2,7 @@
 <block>
   <name>vec_shift</name>
   <key>testblocks_vec_shift</key>
-  <category>testblocks</category>
+  <category>[testblocks]</category>
   <import>import testblocks</import>
   <make>testblocks.vec_shift()</make>
 

@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 ##################################################
 # GNU Radio Python Flow Graph
-# Title: Test interp2 Function
+# Title: Test decim2 Function
 # Author: Michael Rahaim
-# Description: Test GRC flowgraph for the interp2 function
-# Generated: Mon Jun 19 18:03:58 2017
+# Description: Test GRC flowgraph for the decim2 function
+# Generated: Mon Jun 19 18:03:09 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -33,12 +33,12 @@ import testblocks
 from gnuradio import qtgui
 
 
-class interp2_test(gr.top_block, Qt.QWidget):
+class decim2_test(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "Test interp2 Function")
+        gr.top_block.__init__(self, "Test decim2 Function")
         Qt.QWidget.__init__(self)
-        self.setWindowTitle("Test interp2 Function")
+        self.setWindowTitle("Test decim2 Function")
         qtgui.util.check_set_qss()
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
@@ -56,7 +56,7 @@ class interp2_test(gr.top_block, Qt.QWidget):
         self.top_grid_layout = Qt.QGridLayout()
         self.top_layout.addLayout(self.top_grid_layout)
 
-        self.settings = Qt.QSettings("GNU Radio", "interp2_test")
+        self.settings = Qt.QSettings("GNU Radio", "decim2_test")
         self.restoreGeometry(self.settings.value("geometry").toByteArray())
 
         ##################################################
@@ -68,10 +68,10 @@ class interp2_test(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
-        self.testblocks_interp2_0 = testblocks.interp2()
+        self.testblocks_decim2_0 = testblocks.decim2()
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
-        	2*disp_points, #size
-        	2*samp_rate, #samp_rate
+        	disp_points/2, #size
+        	samp_rate/2, #samp_rate
         	"", #name
         	1 #number of inputs
         )
@@ -90,7 +90,7 @@ class interp2_test(gr.top_block, Qt.QWidget):
         if not True:
           self.qtgui_time_sink_x_0_0.disable_legend()
 
-        labels = ['Interpolated Signal', '', '', '', '',
+        labels = ['Decimated Signal', '', '', '', '',
                   '', '', '', '', '']
         widths = [1, 1, 1, 1, 1,
                   1, 1, 1, 1, 1]
@@ -137,7 +137,7 @@ class interp2_test(gr.top_block, Qt.QWidget):
         if not True:
           self.qtgui_time_sink_x_0.disable_legend()
 
-        labels = ['Original Signal', '', '', '', '',
+        labels = ['Orignal Signal', '', '', '', '',
                   '', '', '', '', '']
         widths = [1, 1, 1, 1, 1,
                   1, 1, 1, 1, 1]
@@ -171,11 +171,11 @@ class interp2_test(gr.top_block, Qt.QWidget):
         ##################################################
         self.connect((self.analog_sig_source_x_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.analog_sig_source_x_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.blocks_throttle_0, 0), (self.testblocks_interp2_0, 0))
-        self.connect((self.testblocks_interp2_0, 0), (self.qtgui_time_sink_x_0_0, 0))
+        self.connect((self.blocks_throttle_0, 0), (self.testblocks_decim2_0, 0))
+        self.connect((self.testblocks_decim2_0, 0), (self.qtgui_time_sink_x_0_0, 0))
 
     def closeEvent(self, event):
-        self.settings = Qt.QSettings("GNU Radio", "interp2_test")
+        self.settings = Qt.QSettings("GNU Radio", "decim2_test")
         self.settings.setValue("geometry", self.saveGeometry())
         event.accept()
 
@@ -184,7 +184,7 @@ class interp2_test(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.qtgui_time_sink_x_0_0.set_samp_rate(2*self.samp_rate)
+        self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate/2)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
         self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
@@ -196,7 +196,7 @@ class interp2_test(gr.top_block, Qt.QWidget):
         self.disp_points = disp_points
 
 
-def main(top_block_cls=interp2_test, options=None):
+def main(top_block_cls=decim2_test, options=None):
 
     from distutils.version import StrictVersion
     if StrictVersion(Qt.qVersion()) >= StrictVersion("4.5.0"):

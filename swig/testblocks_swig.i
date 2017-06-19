@@ -14,6 +14,7 @@
 #include "testblocks/mult_var.h"
 #include "testblocks/streams_to_streams_ff.h"
 #include "testblocks/interp2.h"
+#include "testblocks/decim2.h"
 %}
 
 
@@ -30,3 +31,5 @@ GR_SWIG_BLOCK_MAGIC2(testblocks, mult_var);
 GR_SWIG_BLOCK_MAGIC2(testblocks, streams_to_streams_ff);
 %include "testblocks/interp2.h"
 GR_SWIG_BLOCK_MAGIC2(testblocks, interp2);
+%include "testblocks/decim2.h"
+GR_SWIG_BLOCK_MAGIC2(testblocks, decim2);

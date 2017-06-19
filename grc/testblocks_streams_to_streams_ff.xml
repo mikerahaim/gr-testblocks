@@ -2,7 +2,7 @@
 <block>
   <name>streams_to_streams_ff</name>
   <key>testblocks_streams_to_streams_ff</key>
-  <category>testblocks</category>
+  <category>[testblocks]</category>
   <import>import testblocks</import>
   <make>testblocks.streams_to_streams_ff($num_streams)</make>
   <param>

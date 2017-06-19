@@ -1,17 +1,11 @@
 <?xml version="1.0"?>
 <block>
-  <name>mult_var</name>
-  <key>testblocks_mult_var</key>
+  <name>decim2</name>
+  <key>testblocks_decim2</key>
   <category>[testblocks]</category>
   <import>import testblocks</import>
-  <make>testblocks.mult_var($mult)</make>
-  <callback>set_mult($mult)</callback>
-  
-  <param>
-    <name>Multiply Value</name>
-    <key>mult</key>
-    <type>float</type>
-  </param>
+  <make>testblocks.decim2()</make>
+
 
   <sink>
     <name>in</name>
