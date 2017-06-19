@@ -26,5 +26,6 @@ install(FILES
     vec_shift_var.h
     vec_resize.h
     mult_var.h
-    streams_to_streams_ff.h DESTINATION include/testblocks
+    streams_to_streams_ff.h
+    interp2.h DESTINATION include/testblocks
 )

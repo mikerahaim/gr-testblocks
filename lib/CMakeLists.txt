@@ -30,6 +30,7 @@ list(APPEND testblocks_sources
     vec_resize_impl.cc
     mult_var_impl.cc
     streams_to_streams_ff_impl.cc
+    interp2_impl.cc
 )
 
 set(testblocks_sources "${testblocks_sources}" PARENT_SCOPE)
