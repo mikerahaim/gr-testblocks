@@ -2,7 +2,7 @@
 <block>
   <name>interp2</name>
   <key>testblocks_interp2</key>
-  <category>[testblocks]</category>
+  <category>[testblocks]/Rate Change</category>
   <import>import testblocks</import>
   <make>testblocks.interp2()</make>
 

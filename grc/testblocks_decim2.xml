@@ -2,7 +2,7 @@
 <block>
   <name>decim2</name>
   <key>testblocks_decim2</key>
-  <category>[testblocks]</category>
+  <category>[testblocks]/Rate Change</category>
   <import>import testblocks</import>
   <make>testblocks.decim2()</make>
 

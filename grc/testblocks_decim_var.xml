@@ -2,7 +2,7 @@
 <block>
   <name>decim_var</name>
   <key>testblocks_decim_var</key>
-  <category>[testblocks]</category>
+  <category>[testblocks]/Rate Change</category>
   <import>import testblocks</import>
   <make>testblocks.decim_var($decimation)</make>
 

@@ -2,7 +2,7 @@
 <block>
   <name>interp_var</name>
   <key>testblocks_interp_var</key>
-  <category>[testblocks]</category>
+  <category>[testblocks]/Rate Change</category>
   <import>import testblocks</import>
   <make>testblocks.interp_var($interpolation)</make>
   

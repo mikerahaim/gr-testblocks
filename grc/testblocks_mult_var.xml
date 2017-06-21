@@ -2,7 +2,7 @@
 <block>
   <name>mult_var</name>
   <key>testblocks_mult_var</key>
-  <category>[testblocks]</category>
+  <category>[testblocks]/Basic Blocks</category>
   <import>import testblocks</import>
   <make>testblocks.mult_var($mult)</make>
   <callback>set_mult($mult)</callback>
