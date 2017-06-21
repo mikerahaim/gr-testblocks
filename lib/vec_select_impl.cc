@@ -44,7 +44,7 @@ namespace gr {
               gr::io_signature::make(1, 1, sizeof(float)))
     {
       vec_select_impl::my_vlen = vlen;
-      vec_select_impl::my_select = my_select;
+      vec_select_impl::my_select = select;
       while (vec_select_impl::my_select > vlen)
       {
         vec_select_impl::my_select-=vlen;

@@ -2,7 +2,7 @@
 <block>
   <name>vec_shift_var</name>
   <key>testblocks_vec_shift_var</key>
-  <category>[testblocks]</category>
+  <category>[testblocks]/Vector</category>
   <import>import testblocks</import>
   <make>testblocks.vec_shift_var($vec_len, $shift)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.

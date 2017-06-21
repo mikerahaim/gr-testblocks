@@ -4,8 +4,8 @@
 # GNU Radio Python Flow Graph
 # Title: Test file for vec_select
 # Author: Michael Rahaim
-# Description: NOTE: The original offset is off. I believe this has to do with to difference in the number of samples to propogate through the stream to vector and vec select blocks compared to the direct connection between throttle and the time sink.
-# Generated: Wed Jun 21 16:41:24 2017
+# Description: Multiple delayed signal chains combined to a vector. The vec_select block picks which of the signal chains to pass along.
+# Generated: Wed Jun 21 18:23:55 2017
 ##################################################
 
 if __name__ == '__main__':

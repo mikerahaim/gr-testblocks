@@ -39,7 +39,7 @@ class qa_vec_select (gr_unittest.TestCase):
 
         src = blocks.vector_source_f(src_data)
         s2v = blocks.stream_to_vector(gr.sizeof_float, vec_len)
-        blk = testblocks.vec_shift_var(vec_len, my_select)
+        blk = testblocks.vec_select(vec_len, my_select)
         dst = blocks.vector_sink_f()
         
         self.tb.connect(src, s2v)
@@ -49,6 +49,8 @@ class qa_vec_select (gr_unittest.TestCase):
         result_data = dst.data()
         print "T1 Source: "
         print str(src_data).strip('[]')
+        print "T1 Expected Results: "
+        print str(expected_result).strip('[]')
         print "T1 Results: "
         print str(result_data).strip('[]')
         self.assertFloatTuplesAlmostEqual(expected_result, result_data, 6)
@@ -61,7 +63,7 @@ class qa_vec_select (gr_unittest.TestCase):
 
         src = blocks.vector_source_f(src_data)
         s2v = blocks.stream_to_vector(gr.sizeof_float, vec_len)
-        blk = testblocks.vec_shift_var(vec_len, my_select)
+        blk = testblocks.vec_select(vec_len, my_select)
         dst = blocks.vector_sink_f()
         
         self.tb.connect(src, s2v)
@@ -69,9 +71,11 @@ class qa_vec_select (gr_unittest.TestCase):
         self.tb.connect(blk, dst)
         self.tb.run()
         result_data = dst.data()
-        print "T1 Source: "
+        print "T2 Source: "
         print str(src_data).strip('[]')
-        print "T1 Results: "
+        print "T2 Expected Results: "
+        print str(expected_result).strip('[]')
+        print "T2 Results: "
         print str(result_data).strip('[]')
         self.assertFloatTuplesAlmostEqual(expected_result, result_data, 6)
         
@@ -83,7 +87,7 @@ class qa_vec_select (gr_unittest.TestCase):
 
         src = blocks.vector_source_f(src_data)
         s2v = blocks.stream_to_vector(gr.sizeof_float, vec_len)
-        blk = testblocks.vec_shift_var(vec_len, my_select)
+        blk = testblocks.vec_select(vec_len, my_select)
         dst = blocks.vector_sink_f()
         
         blk.set_select(3)
@@ -93,9 +97,11 @@ class qa_vec_select (gr_unittest.TestCase):
         self.tb.connect(blk, dst)
         self.tb.run()
         result_data = dst.data()
-        print "T1 Source: "
+        print "T3 Source: "
         print str(src_data).strip('[]')
-        print "T1 Results: "
+        print "T3 Expected Results: "
+        print str(expected_result).strip('[]')
+        print "T3 Results: "
         print str(result_data).strip('[]')
         self.assertFloatTuplesAlmostEqual(expected_result, result_data, 6)
         

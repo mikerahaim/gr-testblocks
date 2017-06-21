@@ -2,7 +2,7 @@
 <block>
   <name>vec_resize</name>
   <key>testblocks_vec_resize</key>
-  <category>[testblocks]</category>
+  <category>[testblocks]/Vector</category>
   <import>import testblocks</import>
   <make>testblocks.vec_resize($in_len, $out_len)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.

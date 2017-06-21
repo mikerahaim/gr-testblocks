@@ -22,7 +22,7 @@
     </param>
     <param>
       <key>description</key>
-      <value>NOTE: The original offset is off. I believe this has to do with to difference in the number of samples to propogate through the stream to vector and vec select blocks compared to the direct connection between throttle and the time sink.</value>
+      <value>Multiple delayed signal chains combined to a vector. The vec_select block picks which of the signal chains to pass along.</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -998,7 +998,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(936, 180)</value>
+      <value>(968, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
