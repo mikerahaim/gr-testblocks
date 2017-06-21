@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<block>
+  <name>vec_select</name>
+  <key>testblocks_vec_select</key>
+  <category>[testblocks]</category>
+  <import>import testblocks</import>
+  <make>testblocks.vec_select($vlen, $select)</make>
+  <callback>set_select($select)</callback>
+  
+
+  <param>
+    <name>Vector Length</name>
+    <key>vlen</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Selection</name>
+    <key>select</key>
+    <type>float</type>
+  </param>
+  
+  
+
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <vlen>$vlen</vlen>
+  </sink>
+
+
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>
