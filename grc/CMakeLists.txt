@@ -25,5 +25,6 @@ install(FILES
     testblocks_interp2.xml
     testblocks_decim2.xml
     testblocks_interp_var.xml
-    testblocks_decim_var.xml DESTINATION share/gnuradio/grc/blocks
+    testblocks_decim_var.xml
+    testblocks_vec_select.xml DESTINATION share/gnuradio/grc/blocks
 )

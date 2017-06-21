@@ -34,6 +34,7 @@ list(APPEND testblocks_sources
     decim2_impl.cc
     interp_var_impl.cc
     decim_var_impl.cc
+    vec_select_impl.cc
 )
 
 set(testblocks_sources "${testblocks_sources}" PARENT_SCOPE)

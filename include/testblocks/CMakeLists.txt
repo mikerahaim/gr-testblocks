@@ -30,5 +30,6 @@ install(FILES
     interp2.h
     decim2.h
     interp_var.h
-    decim_var.h DESTINATION include/testblocks
+    decim_var.h
+    vec_select.h DESTINATION include/testblocks
 )

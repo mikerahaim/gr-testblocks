@@ -17,6 +17,7 @@
 #include "testblocks/decim2.h"
 #include "testblocks/interp_var.h"
 #include "testblocks/decim_var.h"
+#include "testblocks/vec_select.h"
 %}
 
 
@@ -39,3 +40,5 @@ GR_SWIG_BLOCK_MAGIC2(testblocks, decim2);
 GR_SWIG_BLOCK_MAGIC2(testblocks, interp_var);
 %include "testblocks/decim_var.h"
 GR_SWIG_BLOCK_MAGIC2(testblocks, decim_var);
+%include "testblocks/vec_select.h"
+GR_SWIG_BLOCK_MAGIC2(testblocks, vec_select);
